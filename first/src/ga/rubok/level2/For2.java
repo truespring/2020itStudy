@@ -1,4 +1,4 @@
-package ga.rubok.repeat;
+package ga.rubok.level2;
 
 public class For2 {
 	

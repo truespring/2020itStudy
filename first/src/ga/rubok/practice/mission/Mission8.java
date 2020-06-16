@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Mission8 {
 	public static void main(String[] args) {
+		
 		int max = 80;
 		int min = 10;
 		
