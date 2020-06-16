@@ -15,7 +15,6 @@ public class Array {
 		int[] arr5 = { 10, 20, 30, 40 }; // 방을 만듦과 동시에 객체를 할당
 		System.out.println(arr5[0]);
 		
-		
 		int[] arr7 = new int[100];
 		for(int i = 0; i < arr7.length; i++) { //주소값.~~~ 여기서 .을 사용하는 것은 reference 변수만 사용 가능함, null 일 때는 에러가 발생
 			arr7[i] = 5;
