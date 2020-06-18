@@ -29,9 +29,10 @@ public class GreatMission1 {
 		while (true) {
 			int st = 0;
 			int ba = 0;
+			
+			System.out.print("숫자입력 : ");
 
 			for (int j = 0; j < rArr.length; j++) {
-				System.out.print("값" + (j + 1) + ":");
 				myArr[j] = sc.nextInt();
 			} // 입력 반복
 			for (int i = 0; i < rArr.length; i++) {
@@ -46,7 +47,7 @@ public class GreatMission1 {
 			if (LEN == st) {
 				break;
 			} // 정답 시 반복문 탈출
-			System.out.printf("S : %d, B : %d, O : %d\n", st, ba, (LEN - st - ba));
+			System.out.printf("S : %d / B : %d / O : %d\n", st, ba, (LEN - st - ba));
 		} // 오답 시 결과 출력
 		for (int i = 0; i < rArr.length; i++) {
 			System.out.print(rArr[i] + ", ");
