@@ -5,7 +5,7 @@ public class TvTest2 {
 		Tv tv1 = new Tv();
 		Tv tv2 = tv1;
 		
-		tv1.channelUp();
+		tv1.channelUp(); 
 		System.out.println(tv2.channel);
 				
 	}

@@ -3,7 +3,7 @@ package ga.rubok.level3;
 public class TvTest3 {
 	public static void main(String[] args) {
 		Tv[] tvArr = new Tv[3];
-		/*
+		/* 
 		현재 객체는 null
 		객체를 만들지 않았기 때문
 		*/

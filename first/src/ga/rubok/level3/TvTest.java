@@ -4,7 +4,7 @@ public class TvTest {
 	public static void main(String[] args) {
 		Tv tv1 = new Tv(); //Tv 객체 주소값만 받음
 		
-		System.out.println("name : " + tv1.name);
+		System.out.println("name : " + tv1.name); 
 		System.out.println("power : " + tv1.power);
 		System.out.println("channel : " + tv1.channel);
 		
