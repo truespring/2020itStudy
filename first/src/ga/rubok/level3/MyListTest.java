@@ -9,14 +9,15 @@ public class MyListTest {
 		list.add(10);
 		list.add(15);
 		list.add(12);
-		list.add(16);
-		list.add(15);
-		list.add(15);
-		list.add(15);
-		list.remove(2);
-		list.remove();
-		list.remove();
 
+		MyArrays.print(list);
+		MyArrays.print(list);
+
+		String str = MyArrays.toString(list);
+		System.out.println("str : " + str);
+
+		int delVal = list.remove();
+		System.out.println(delVal);
 		int len = list.size();
 		System.out.println(len);
 		int val = list.get(1);
@@ -24,6 +25,36 @@ public class MyListTest {
 		val = list.get(0);
 		System.out.println(val);
 
+	}
+}
+
+class MyArrays {
+
+	static String toString(MyList list) {
+		String str = "";
+		for(int i = 0; i < list.size(); i++) {
+			if(i > 0) {
+				str += ", ";
+//				str = str + ", ";
+				}
+				str += list.get(i);
+		}
+		return String.format("[%s]", str);
+		//return "[" + str + "]";
+	}
+
+	static void print(MyList list) {
+//		System.out.println(toString(list));
+		System.out.print("[");
+		for (int i = 0; i < list.size(); i++) {
+//			System.out.printf(i < list.size() - 1 ? "%d, " : "%d]", list.get(i));
+			System.out.print(list.get(i));
+			if (i == list.size() - 1) {
+				System.out.println("]");
+			} else {
+				System.out.print(", ");
+			}
+		}
 	}
 }
 
@@ -38,26 +69,18 @@ class MyList {
 		arr = new int[0];
 	}
 
-	void remove(int n) {
-		int[] temp = new int[arr.length - 1];
-		for (int i = 0; i < arr.length - 1; i++) {
-			if (i == n || i > n) {
-				temp[i] = arr[i + 1];
-			} else {
-				temp[i] = arr[i];
-			}
-		}
-		arr = temp;
-		System.out.println(Arrays.toString(arr));
-	}
-
-	void remove() {
+	int remove(int n) {
 		int[] temp = new int[arr.length - 1];
 		for (int i = 0; i < temp.length; i++) {
-			temp[i] = arr[i];
+			temp[i] = arr[i < n ? i : i + 1];
 		}
+		int delVal = arr[n];
 		arr = temp;
-		System.out.println(Arrays.toString(arr));
+		return delVal;
+	}
+
+	int remove() {
+		return remove(arr.length - 1);
 	}
 
 	void add(int n) {
@@ -72,7 +95,7 @@ class MyList {
 
 	void add(int n1, int n2) {
 		int[] temp = new int[arr.length + 1];
-		for (int i = 0; i <= arr.length; i++) {
+		for (int i = 0; i < temp.length; i++) {
 			if (i == n1) {
 				temp[i] = n2;
 			} else if (i > n1) {
