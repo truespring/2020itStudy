@@ -6,10 +6,6 @@ public class Game {
 		
 		Baseball ball = new Baseball(gameCnt);
 		MyBall myBall = new MyBall(gameCnt);
-
-		myBall.setNumbers(); //슷자1: 3 숫자2: 4
-		int val = ball.get(0);
-		System.out.println(val);
 		
 		do {
 			myBall.setNumbers();
