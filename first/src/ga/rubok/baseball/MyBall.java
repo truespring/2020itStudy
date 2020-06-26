@@ -23,13 +23,10 @@ public class MyBall {
 			try {
 				myArr[i] = Integer.parseInt(val); // 0~9사이의 숫자가 들어가야함
 			} catch (Exception e) { // e는 에러 정보
-				myArr[i] = 0;
-			} // 예외 처리 구문
-			if (myArr[i] == 0) {
 				i--;
 				System.out.println("숫자만 입력하세요.");
 				continue;
-			}
+			} // 예외 처리 구문
 			if (myArr[i] < 0 || myArr[i] > 9) {
 				i--;
 				System.out.println("1~9값만 입력하세요.");
