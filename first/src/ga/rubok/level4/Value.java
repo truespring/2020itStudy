@@ -14,6 +14,10 @@ public class Value {
 	
 	@Override
 	public boolean equals(Object obj) {
+		Value val = (Value)obj;
+		if(this.getVal() == val.getVal()) {
+			return true;
+		}
 		return false;
 	}
 }

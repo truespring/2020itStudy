@@ -12,6 +12,12 @@ public class ValueTest {
 		Value val1 = new Value(1);
 		Value val2 = new Value(1);
 		
+//		System.out.println(val1 + " " + val2);
+		int get1 = val1.getVal();
+		int get2 = val2.getVal();
+		
+//		System.out.println(get1 == get2);
+		
 		System.out.println(val1 == val2);
 		System.out.println(val1.equals(val2));
 	}

@@ -25,7 +25,7 @@ public class Animal extends Object {
 	}
 
 }
-/* (상속관계) 다양성
+/* (상속관계) 다형성 - 다양한 형태
  1. 부모타입은 자식 객체 주소값을 저장할 수 있다.
  ex) ClassA clsA1 = new ClassB(); 가능
  	 ClassA clsA2 = new ClassC(); 가능
@@ -33,6 +33,9 @@ public class Animal extends Object {
  2. 자식타입은 부모 객체 주소값을 저장할 수 없다.
  	 ClassB clsB1 = new ClassA(); 불가능
  3. 타입은 메소드 호출 할 수 있나 없나만 결정한다.(자기가 알고 있는 메소드만 호출할 수 있다.)
- 	 호출 했을 때는 객체 기준을 실행이 된다.
+ 	 호출 했을 때는 객체 기준을 실행이 된다. 
  ex) clsA1.print(); 결과는 B출력 
+ 	 ClassA에만 있는 메소드 호출도 가능
+ 	 
+ 	 ClassB clsB = (ClasB)clsA;
  */
