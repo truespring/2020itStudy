@@ -22,6 +22,10 @@ public class Unit {
 	public void getDamage(int damage) {
 		current_hp -= damage;
 	}
+	
+	public void setCurrent_hp(int hp) {
+		this.current_hp = hp;
+	}
 	@Override
 	public String toString() {
 		return String.format("%s, 현재 HP : %d" , NAME, getCurrent_hp());

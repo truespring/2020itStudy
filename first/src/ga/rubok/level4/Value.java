@@ -12,12 +12,12 @@ public class Value {
 		return val;
 	}
 	
-//	@Override
-//	public String toString() {
-////		return String.valueOf(val);
-////		         내가 원하는 형태로 포맷하겠다는 것
-//		return String.format("%,d", val); // 둘 중에 추천하는 방법
-//	}
+	@Override
+	public String toString() {
+//		return String.valueOf(val);
+//		         내가 원하는 형태로 포맷하겠다는 것
+		return String.format("%,d", val); // 둘 중에 추천하는 방법
+	}
 	
 	@Override
 	public boolean equals(Object obj) {
