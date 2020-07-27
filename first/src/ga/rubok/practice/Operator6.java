@@ -16,7 +16,7 @@ public class Operator6 {
 		//주소 값이 다르기 때문에 false가 나타남
 		System.out.println(str2 == str3);
 		
-		System.out.println(str1.equals(str2)); // equals 는 String 에서만 사용함
+		System.out.println(str1.equals(str2));
 		//"문자열".equals(변수)의 형태가 안정적이면 에러날 확률이 적음
 	}
 
